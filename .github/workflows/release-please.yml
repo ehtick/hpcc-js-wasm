@@ -42,7 +42,6 @@ jobs:
           sudo apt-get install -y git cmake ninja-build wget zip
           sudo apt-get install -y gcc-multilib g++-multilib pkg-config autoconf bison libtool flex
           sudo apt-get install -y python3 python3-pip
-          sudo apt-get install -y chromium
 
       - name: Export GitHub Actions cache environment variables
         if: ${{ steps.release.outputs.release_created }}
@@ -63,10 +62,14 @@ jobs:
         run: |
           npm run build
 
+      - name: Prime gecko webdriver
+        if: ${{ steps.release.outputs.release_created }}
+        working-directory: packages/base91
+        run: |
+          npm run test || echo "Prime gecko webdriver"
+
       - name: Test
         if: ${{ steps.release.outputs.release_created }}
-        env:
-          CI: true
         run: |
           npm run test
 
