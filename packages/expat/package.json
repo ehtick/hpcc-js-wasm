@@ -28,6 +28,7 @@
     "lint-skypack": "npx -y @skypack/package-check",
     "lint-eslint": "eslint src/**/*.ts spec/*.ts",
     "lint": "run-p lint-eslint",
+    "test-serve": "jasmine-browser-runner serve",
     "test-browser": "jasmine-browser-runner runSpecs",
     "test-node": "jasmine",
     "test": "run-s test-node test-browser",

@@ -1,4 +1,4 @@
-import { bothTpl, browserTpl, nodeTpl } from "@hpcc-js/esbuild-plugins";
+import { browserTpl, bothTpl, nodeTpl } from "@hpcc-js/esbuild-plugins";
 import { copyFile } from "fs/promises";
 import * as path from "path";
 
@@ -13,8 +13,8 @@ await Promise.all([
 await bothTpl("src/index.ts", "dist/index", undefined, "@hpcc-js/wasm", ["./base91.js", "./duckdb.js", "./expat.js", "./graphviz.js", "./zstd.js"]);
 
 await Promise.all([
-    browserTpl("spec/index-browser.ts", "dist-test/index.browser"),
-    nodeTpl("spec/index-node.ts", "dist-test/index.node"),
+    browserTpl("spec/index-browser.ts", "dist-test/index.browser", undefined, undefined, undefined, ["@hpcc-js/wasm"]),
+    nodeTpl("spec/index-node.ts", "dist-test/index.node", undefined, undefined, undefined, ["@hpcc-js/wasm"]),
 ]);
 
 await Promise.all([

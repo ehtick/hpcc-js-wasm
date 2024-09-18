@@ -4,7 +4,6 @@ import { Graphviz } from "@hpcc-js/wasm-graphviz";
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
 
 describe("worker-browser", function () {
-    console.log("worker-esm-0");
 
     let v;
     it("fetch version", async function () {
@@ -23,16 +22,14 @@ describe("worker-browser", function () {
     it("worker-esm", function (done) {
 
         new Promise(() => {
-            console.log("worker-esm-2");
-            const myWorker = new Worker("__spec__/worker.browser.js");
+            const myWorker = new Worker("__spec__/worker.browser.js", { type: "module" });
             expect(myWorker).to.be.instanceOf(Worker);
             myWorker.onmessage = function (e) {
                 expect(e.data).to.deep.equal(data + v);
                 done();
             };
-            myWorker.onerror = function (e) {
-                console.log(e);
-                done.fail(e?.error?.message ?? e.message);
+            myWorker.onerror = function (e: Event) {
+                done.fail(e.type);
             };
             myWorker.postMessage(data);
         });
