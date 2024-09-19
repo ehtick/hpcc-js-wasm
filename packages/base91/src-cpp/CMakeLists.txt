@@ -39,4 +39,3 @@ set_target_properties(base91lib PROPERTIES LINK_FLAGS "${LINK_FLAGS}")
 target_link_libraries(base91lib
     PRIVATE unofficial::base91::base91
 )
-
