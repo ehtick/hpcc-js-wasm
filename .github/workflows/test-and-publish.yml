@@ -45,8 +45,9 @@ jobs:
       - name: Install Dependencies
         run: |
           npm ci
+          sudo npx playwright install chromium --with-deps
           npm run install-build-deps
-
+          
       - name: Lint
         run: |
           npm run lint
@@ -54,11 +55,6 @@ jobs:
       - name: Build
         run: |
           npm run build
-
-      - name: Prime gecko webdriver
-        working-directory: packages/base91
-        run: |
-          npm run test || echo "Prime gecko webdriver"
 
       - name: Test
         run: |
@@ -68,7 +64,6 @@ jobs:
         if: ${{ matrix.node == 20 }}
         run: |
           npm run coverage
-          npm run coverage-report
 
       - name: Upload error logs
         if: ${{ failure() || cancelled() }}
