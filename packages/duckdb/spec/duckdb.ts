@@ -9,7 +9,7 @@ describe("duckdb", function () {
         const duckdb = await DuckDB.load();
         const v = duckdb.version();
         expect(v).to.be.a.string;
-        expect(v).to.equal("v0.9.2");
+        expect(v).to.equal("v1.1.1");
         console.log("duckdb version: " + v);
     });
 
