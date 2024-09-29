@@ -59,6 +59,7 @@ jobs:
           npm run install-build-deps
 
       - name: Lint
+        if: ${{ steps.release.outputs.release_created }}
         run: |
           npm run lint
 
