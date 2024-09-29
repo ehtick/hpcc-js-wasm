@@ -5,7 +5,7 @@
 .nx/
 bin/
 build/
-/coverage
+coverage/
 dist/
 dist-test/
 /docs/.vitepress/cache

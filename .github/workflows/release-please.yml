@@ -55,18 +55,17 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         run: |
           npm ci
+          sudo npx playwright install chromium --with-deps
           npm run install-build-deps
+
+      - name: Lint
+        run: |
+          npm run lint
 
       - name: Build
         if: ${{ steps.release.outputs.release_created }}
         run: |
           npm run build
-
-      - name: Prime gecko webdriver
-        if: ${{ steps.release.outputs.release_created }}
-        working-directory: packages/base91
-        run: |
-          npm run test || echo "Prime gecko webdriver"
 
       - name: Test
         if: ${{ steps.release.outputs.release_created }}
@@ -77,13 +76,12 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
         run: |
           npm run coverage
-          npm run coverage-report
 
-      - name: Update Coveralls
-        if: ${{ steps.release.outputs.release_created }}
-        uses: coverallsapp/github-action@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Update Coveralls
+      #   if: ${{ steps.release.outputs.release_created }}
+      #   uses: coverallsapp/github-action@v2
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish
         if: ${{ steps.release.outputs.release_created }}

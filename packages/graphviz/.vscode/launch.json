@@ -2,16 +2,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "test-browser",
-            "type": "msedge",
+            "name": "test-browser-start",
+            "type": "node",
             "request": "launch",
-            "url": "http://localhost:8888",
-            "webRoot": "${workspaceFolder}",
-            "outFiles": [
-                "${workspaceFolder}/**/*.js",
-                "${workspaceFolder}/**/*.c",
-                "!**/node_modules/**"
+            "program": "${workspaceRoot}/../../node_modules/vitest/vitest.mjs",
+            "console": "integratedTerminal",
+            "args": [
+                "run",
+                "--inspect-brk",
+                "--mode",
+                "browser",
+                "--no-file-parallelism"
             ],
+            "presentation": {
+                "hidden": true
+            },
+        },
+        {
+            "name": "test-browser-attach",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9229,
+            "presentation": {
+                "hidden": true
+            }
         },
         {
             "name": "test-node",
@@ -23,13 +37,23 @@
             ],
             "runtimeExecutable": "npm",
             "skipFiles": [
-                "<node_internals>/**"
+                "<node_internals>/**",
+                "**/node_modules/**",
             ],
             "outFiles": [
                 "${workspaceFolder}/**/*.js",
-                "${workspaceFolder}/**/*.c",
                 "!**/node_modules/**"
             ],
+        }
+    ],
+    "compounds": [
+        {
+            "name": "test-browser",
+            "configurations": [
+                "test-browser-attach",
+                "test-browser-start"
+            ],
+            "stopAll": true
         }
     ]
 }

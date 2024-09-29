@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "gen-types-watch",
             "type": "npm",
-            "label": "build-types-watch",
-            "script": "build-types-watch",
+            "script": "gen-types-watch",
             "problemMatcher": [
                 "$tsc-watch"
             ],
@@ -13,46 +13,10 @@
             }
         },
         {
+            "label": "bundle-watch",
             "type": "npm",
-            "label": "build-ts-watch",
-            "script": "build-ts-watch",
-            "problemMatcher": [
-                "$tsc-watch"
-            ],
-            "presentation": {
-                "group": "group-build"
-            }
-        },
-        {
-            "type": "npm",
-            "label": "build-cpp-watch",
-            "script": "build-cpp-watch",
-            "options": {
-                "cwd": "${workspaceFolder}/../.."
-            },
-            "problemMatcher": {
-                "owner": "cpp",
-                "fileLocation": [
-                    "relative",
-                    "${workspaceFolder}"
-                ],
-                "pattern": {
-                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "severity": 4,
-                    "message": 5
-                }
-            },
-            "presentation": {
-                "group": "group-build"
-            }
-        },
-        {
-            "type": "npm",
-            "label": "test-serve",
-            "script": "test-serve",
+            "script": "bundle-watch",
+            "problemMatcher": [],
             "presentation": {
                 "group": "group-build"
             }
@@ -60,10 +24,8 @@
         {
             "label": "build",
             "dependsOn": [
-                "build-types-watch",
-                "build-ts-watch",
-                "build-cpp-watch",
-                "test-serve"
+                "gen-types-watch",
+                "bundle-watch"
             ],
             "group": {
                 "kind": "build",
