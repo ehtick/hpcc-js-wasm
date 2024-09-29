@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-duckdb-v1.4.0...wasm-duckdb-v1.5.0) (2024-09-29)
+
+
+### Features
+
+* Bump Versions ([33b44f2](https://github.com/hpcc-systems/hpcc-js-wasm/commit/33b44f2d70f8e0de1d83bee2e2af008deecde273))
+
 ## [1.4.0](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-duckdb-v1.3.0...wasm-duckdb-v1.4.0) (2024-09-11)
 
 
