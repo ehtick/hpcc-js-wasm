@@ -8,6 +8,13 @@ _This changelog is now a summary of all changes across all packages in the mono 
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.1](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-root-v3.5.0...wasm-root-v3.5.1) (2024-09-29)
+
+
+### Bug Fixes
+
+* Graphviz targetting wrong platform ([f5e992c](https://github.com/hpcc-systems/hpcc-js-wasm/commit/f5e992ce34d49b7db75ce6ac14a4bd43cacb2045))
+
 ## [3.5.0](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-root-v3.4.0...wasm-root-v3.5.0) (2024-09-29)
 
 

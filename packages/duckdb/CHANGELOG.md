@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-duckdb-v1.5.0...wasm-duckdb-v1.5.1) (2024-09-29)
+
+
+### Bug Fixes
+
+* Graphviz targetting wrong platform ([f5e992c](https://github.com/hpcc-systems/hpcc-js-wasm/commit/f5e992ce34d49b7db75ce6ac14a4bd43cacb2045))
+
 ## [1.5.0](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-duckdb-v1.4.0...wasm-duckdb-v1.5.0) (2024-09-29)
 
 
