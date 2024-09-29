@@ -8,6 +8,18 @@ _This changelog is now a summary of all changes across all packages in the mono 
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-root-v3.4.0...wasm-root-v3.5.0) (2024-09-29)
+
+
+### Features
+
+* Bump Versions ([33b44f2](https://github.com/hpcc-systems/hpcc-js-wasm/commit/33b44f2d70f8e0de1d83bee2e2af008deecde273))
+
+
+### Bug Fixes
+
+* Lint should not be run on push ([5cc054b](https://github.com/hpcc-systems/hpcc-js-wasm/commit/5cc054b45c8b350aad6825769f982461f1ff5201))
+
 ## [3.4.0](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-root-v3.3.0...wasm-root-v3.4.0) (2024-09-17)
 
 
