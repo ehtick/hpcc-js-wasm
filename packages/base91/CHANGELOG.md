@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-base91-v1.3.0...wasm-base91-v1.3.1) (2024-09-29)
+
+
+### Bug Fixes
+
+* Graphviz targetting wrong platform ([f5e992c](https://github.com/hpcc-systems/hpcc-js-wasm/commit/f5e992ce34d49b7db75ce6ac14a4bd43cacb2045))
+
 ## [1.3.0](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-base91-v1.2.0...wasm-base91-v1.3.0) (2024-08-30)
 
 
