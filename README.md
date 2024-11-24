@@ -20,11 +20,12 @@ Built with:
 ## Homepage and Documents
 
 * [Homepage](https://hpcc-systems.github.io/hpcc-js-wasm/)
-    * [Base91](https://hpcc-systems.github.io/hpcc-js-wasm/base91/classes/Base91.html)
-    * [DuckDB](https://hpcc-systems.github.io/hpcc-js-wasm/duckdb/classes/DuckDB.html)
-    * [Expat](https://hpcc-systems.github.io/hpcc-js-wasm/expat/classes/Expat.html)
-    * [Graphviz](https://hpcc-systems.github.io/hpcc-js-wasm/graphviz/classes/Graphviz.html)
-    * [Zstd](https://hpcc-systems.github.io/hpcc-js-wasm/zstd/classes/Zstd.html)
+    * [Base91](https://hpcc-systems.github.io/hpcc-js-wasm/base91/src/base91/classes/Base91.html)
+    * [DuckDB](https://hpcc-systems.github.io/hpcc-js-wasm/duckdb/src/duckdb/classes/DuckDB.html)
+    * [Expat](https://hpcc-systems.github.io/hpcc-js-wasm/expat/src/expat/classes/Expat.html)
+    * [Graphviz](https://hpcc-systems.github.io/hpcc-js-wasm/graphviz/src/graphviz/classes/Graphviz.html)
+    * [Llama](https://hpcc-systems.github.io/hpcc-js-wasm/llama/src/llama/classes/Llama.html)
+    * [Zstd](https://hpcc-systems.github.io/hpcc-js-wasm/zstd/src/zstd/classes/Zstd.html)
 
 ## Version 3 Changes
 
