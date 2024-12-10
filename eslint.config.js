@@ -2,16 +2,17 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 
+
+/** @type {import('eslint').Linter.Config[]} */
 export default [
     {
-        files: ["**/*.{js,mjs,cjs,ts}"],
+        files: [
+            "**/*.{js,mjs,cjs,ts}"
+        ]
     },
     {
         languageOptions: {
-            globals: {
-                ...globals.browser,
-                ...globals.node
-            }
+            globals: globals.browser
         }
     },
     pluginJs.configs.recommended,
@@ -20,15 +21,15 @@ export default [
         rules: {
             "@typescript-eslint/no-explicit-any": "off",
             "@typescript-eslint/no-unused-expressions": "off",
-            "@typescript-eslint/no-namespace": "off",
             "@typescript-eslint/no-unused-vars": [
-                "error", // or "error"
+                "error",
                 {
-                    "argsIgnorePattern": "^_",
-                    // "varsIgnorePattern": "^_",
-                    // "caughtErrorsIgnorePattern": "^_"
+                    "args": "none",
+                    "varsIgnorePattern": "^_"
                 }
-            ]
+            ],
+            "@typescript-eslint/no-namespace": "off",
         }
-    },
+    }
+
 ];

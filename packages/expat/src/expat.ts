@@ -144,7 +144,7 @@ export class StackParser implements IParser {
         return retVal;
     }
 
-    endElement(_tag: string): StackElement {
+    endElement(tag: string): StackElement {
         return this._stack.pop()!;
     }
 
