@@ -8,6 +8,20 @@ _This changelog is now a summary of all changes across all packages in the mono 
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-root-v3.5.1...wasm-root-v3.6.0) (2024-12-10)
+
+
+### Features
+
+* Bump DuckDB version to 1.1.3 ([33d08e2](https://github.com/hpcc-systems/hpcc-js-wasm/commit/33d08e26736f71b58d109163bb9c885512c852f2))
+* Bump graphviz version to 12.2.0 ([0427987](https://github.com/hpcc-systems/hpcc-js-wasm/commit/0427987a317f478ef02f4101034728135d38732d))
+* Bump versions ([2ae7438](https://github.com/hpcc-systems/hpcc-js-wasm/commit/2ae7438aa992b26044b43f7ee71753ff57b7c9e6))
+
+
+### Bug Fixes
+
+* Ossar tests failing with new eslint file format ([1e753a3](https://github.com/hpcc-systems/hpcc-js-wasm/commit/1e753a3c05604bef98e5719d609cb72fa06d25fc))
+
 ## [3.5.1](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-root-v3.5.0...wasm-root-v3.5.1) (2024-09-29)
 
 

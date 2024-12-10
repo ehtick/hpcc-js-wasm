@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-expat-v1.3.1...wasm-expat-v1.3.2) (2024-12-10)
+
+
+### Bug Fixes
+
+* Ossar tests failing with new eslint file format ([1e753a3](https://github.com/hpcc-systems/hpcc-js-wasm/commit/1e753a3c05604bef98e5719d609cb72fa06d25fc))
+
 ## [1.3.1](https://github.com/hpcc-systems/hpcc-js-wasm/compare/wasm-expat-v1.3.0...wasm-expat-v1.3.1) (2024-09-29)
 
 
