@@ -40,7 +40,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@duckdb/duckdb-wasm": "next",
+    "@duckdb/duckdb-wasm": "1.29.0",
     "mkdirp": "3.0.1"
   },
   "keywords": [
