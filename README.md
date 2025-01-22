@@ -3,8 +3,6 @@
 ![Tests](https://github.com/hpcc-systems/hpcc-js-wasm/workflows/Test%20PR/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/GordonSmith/hpcc-js-wasm/badge.svg?branch=BUMP_VERSIONS)](https://coveralls.io/github/GordonSmith/hpcc-js-wasm?branch=BUMP_VERSIONS)
 
-**Note:  @hpcc-js/wasm is now an ESM by default package** - this is a good thing, but does require some breaking changes.
-
 This repository contains a collection of useful c++ libraries compiled to WASM for (re)use in Node JS, Web Browsers and JavaScript Libraries:
 - [base91](https://base91.sourceforge.net/) - v0.6.0
 - [duckdb](https://github.com/duckdb/duckdb) - v1.1.1
@@ -127,4 +125,40 @@ Graphviz.load().then(graphviz => {
 
     console.log(graphviz.version());
 });
+```
+
+## Build Instructions
+
+The following instructions are for building the entire repository from scratch.  In general the instructions assume you are running from within a bash terminal.
+
+* Windows (With WSL2 and Git Bash installed) 
+* Linux (native or WSL2)
+* MacOS 
+* Docker
+
+## Pre-requisites
+
+To get an idea of what pre-requisites are required, please see the following files:
+
+* [Dockerfile](docker/ubuntu-dev.dockerfile)
+* [GH Action Ubuntu](.github/workflows/test-pr.yml)
+* NodeJS
+
+## Steps (Docker)
+
+```bash
+git clone https://github.com/hpcc-systems/hpcc-js-wasm.git
+cd hpcc-js-wasm
+npm ci
+npm run build-docker
+```
+
+## Steps (Windows, Linux, MacOS)
+
+```bash
+git clone https://github.com/hpcc-systems/hpcc-js-wasm.git
+cd hpcc-js-wasm
+npm ci
+npm run install-build-deps
+npm run build
 ```
